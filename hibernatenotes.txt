@@ -1,0 +1,48 @@
+--> maven project
+	|--> create simple project
+		|--> art id
+		|-->group id
+-->src/main/resource
+	|-->right click-->create folder
+	|-->META-INF
+		|-->persistence.xml
+-->POM.xml
+	<dependencies>sql connector and Hibernate core</dependencies>
+--------------------------------------------------------------------------------------------------
+
+EntityManagerFactory --  responsible for establishing connection
+
+EntityManager -- performing CRUD operation
+	1.persist() -- save the data
+	2.merge() -- update the data in database
+	3.find(columnnamen.class, primarykey) -- find the data in database
+	4.remove(Object) -- remove an object from database
+
+EntityTransaction -- responsible for commit rolleback 
+
+----------------------------------------------------------------------------------------------------
+
+@Id -- used to make column as primary key
+@GeneratedValue(strategy = GenerationType.IDENTITY) -- used to AUTO increment
+
+@Column(naṭme="columnname") -- used to change column name
+@Column(unique = true/false) -- used to make column as unique or not unique
+@Column(nullable = true/false) -- used to make column as nullable or notnullable
+@Table(name="TableName") -- used to change the tbale Name
+
+@Colummn(name="columnname", nullable=true/false, unique=true/false)
+
+-----------------------------------------------------------------------------------------------------
+
+--> Java persistence query language -- it is using aliasing
+
+	1.select alias from tablename alias
+	2.select e from emp e where e.id=1;
+
+-----------------------------------------------------------------------------------------------------
+
+--> Mapping
+ 1. one to one
+ 2. many to many
+ 3. many to one
+ 4. one to many

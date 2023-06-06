@@ -1,0 +1,6 @@
+-->get the row based on requirement
+select * from tablename limit r1(initial position),rn(end position)
+
+-->output formate
+System.out.printf("%10s",s1);
+	s:--> logica
